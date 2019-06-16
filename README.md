@@ -4,5 +4,5 @@ Prepare 1337 session
 # Installation
 Simply run:
 ```sh
-curl -L https://raw.githubusercontent.com/mehdibo/1337-prepsession/master/install.sh | zsh
+curl -s -L https://raw.githubusercontent.com/mehdibo/1337-prepsession/master/install.sh | zsh
 ```
