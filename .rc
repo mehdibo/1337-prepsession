@@ -1,0 +1,6 @@
+# Paths
+export PATH=$HOME/.prep:$PATH
+export PATH=$HOME/.brew/bin:$PATH
+
+# Aliases
+alias brew=$HOME/.prep"/brew.sh"
