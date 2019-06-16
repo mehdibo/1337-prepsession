@@ -6,7 +6,7 @@ if [[ $1 != "install"  ]]; then
 fi
 
 echo "Running custom Brew..."
-sed -i '' "/$2/d" ~/.scripts/brew.install.log
-echo $2 >> ~/.scripts/brew.install.log
+sed -i '' "/$2/d" ~/.prep/brew.packages
+echo $2 >> ~/.prep/brew.packages
 
 brew $1 $2
