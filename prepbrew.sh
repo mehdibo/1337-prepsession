@@ -6,23 +6,25 @@ if [[ $ans == "n" ]]; then
 	exit
 fi
 
-unlink ~/.brew
-rm -rf ~/goinfre/.brew
-sed -i '' '/export PATH=\$HOME\/.brew\/bin:\$PATH/d' ~/.myzshrc
+rm -rf ~/goinfre/.brew ~/.brew
 
 git clone --progress --verbose --depth=1 https://github.com/Homebrew/brew ~/goinfre/.brew
 ln -s ~/goinfre/.brew ~/.brew
-echo 'export PATH=$HOME/.brew/bin:$PATH' >> ~/.myzshrc
 brew update -v
 
-echo "Do you want to install the following packages:? [Y/n]"
-cat ~/.scripts/brew.install.log
+if ![[ $(cat $HOME/.prep/brew.packages) ]]; then
+	echo "Done."
+	exit
+fi
+
+echo "Do you want to restore the following packages:? [Y/n]"
+cat ~/.prep/brew.packages
 read ans
 if [[ $ans == "n" ]]; then
-	echo "Aborted resotring Brew packages"
+	echo "Done."
 	exit
 fi
 
 while read package; do
 	brew install $package
-done < ~/.scripts/brew.install.log
+done < ~/.prep/brew.packages
