@@ -14,3 +14,5 @@ echo "\n\n\n\n"
 echo "Add the following line:\n"
 echo "source "$TARGETDIR"/.rc"
 echo "\nTo your .zshrc"
+
+echo "Run 'prepbrew.sh' to prepare Brew environment"
