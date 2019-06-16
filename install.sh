@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 CUSTOMRC=".spoodyrc"
-TARGETDIR=$HOME"/.scripts"
+TARGETDIR=$HOME"/.prep"
 
 echo "Installing..."
 git clone https://github.com/mehdibo/1337-prepsession.git $TARGETDIR
