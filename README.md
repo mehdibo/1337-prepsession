@@ -1,4 +1,8 @@
 # 1337-prepsession
 Prepare 1337 session
 
-# Copy all the files in ~/.scripts
+# Installation
+Simply run:
+```sh
+curl -L https://raw.githubusercontent.com/mehdibo/1337-prepsession/master/install.sh | zsh
+```
