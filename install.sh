@@ -1,11 +1,11 @@
 #!/bin/zsh
 
 CUSTOMRC=".spoodyrc"
+TARGETDIR=$HOME"/.scripts"
 
-echo "Cloning..."
-git clone https://github.com/mehdibo/1337-prepsession.git $HOME/.scripts
+echo "Installing..."
+git clone https://github.com/mehdibo/1337-prepsession.git $TARGETDIR
 
-echo "Preparing .zshrc..."
-sed -i '' '/source $HOME\/'$CUSTOMRC'/d' ~/.zshrc
-echo 'source $HOME/'$CUSTOMRC >> ~/.zshrc
-echo 'export PATH=$HOME/.scripts:$PATH' > ~/$CUSTOMRC
+echo "Add the following line:"
+echo "source "$TARGETDIR"/.rc"
+echo "To "$HOME"/.zshrc"
