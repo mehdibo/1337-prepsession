@@ -12,7 +12,7 @@ git clone --progress --verbose --depth=1 https://github.com/Homebrew/brew ~/goin
 ln -s ~/goinfre/.brew ~/.brew
 brew update -v
 
-if ![[ $(cat $HOME/.prep/brew.packages) ]]; then
+if ! [[ $(cat $HOME/.prep/brew.packages) ]]; then
 	echo "Done."
 	exit
 fi
