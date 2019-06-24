@@ -1,7 +1,7 @@
 #!/bin/zsh
 echo -n "Continuing will remove all Docker data, are you sure you want to continue? [Y/n]"
 read ans
-if [[ $ans != "Y" ]]; then
+if [[ $ans == "n" ]]; then
 	echo "Aborted Docker"
 	exit;
 fi
