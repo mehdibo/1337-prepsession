@@ -7,4 +7,5 @@ if [[ $ans == "n" ]]; then
 fi
 
 rm -rf ~/VirtualBox\ VMs
-ln -s ~/goinfre/VirtualBox\ VMs ~/VirtualBox\ VMs
+mkdir -f ~/goinfre/vbox
+ln -s ~/goinfre/vbox ~/VirtualBox\ VMs
